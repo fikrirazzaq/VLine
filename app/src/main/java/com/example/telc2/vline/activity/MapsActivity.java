@@ -3,6 +3,7 @@ package com.example.telc2.vline.activity;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
+import com.example.telc2.vline.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
