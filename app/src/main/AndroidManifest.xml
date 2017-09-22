@@ -45,7 +45,11 @@
             android:name=".activity.MapsActivity"
             android:label="@string/title_activity_maps"
             android:theme="@style/AppTheme" />
-        <activity android:name=".activity.StatusActivity"></activity>
+        <activity android:name=".activity.StatusActivity" />
+        <activity
+            android:name=".activity.InfoBankActivity"
+            android:label="@string/title_activity_info_bank"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
