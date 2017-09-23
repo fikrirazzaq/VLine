@@ -86,6 +86,7 @@
             android:background="#ececec"
             >
             <TextView
+                android:id="@+id/tx_status_namabank"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
@@ -202,7 +203,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerHorizontal="true"
-                            android:text="Jumlah Antrian"
+                            android:text="Nomor Antrian"
                             android:padding="4dp"/>
 
                         <TextView

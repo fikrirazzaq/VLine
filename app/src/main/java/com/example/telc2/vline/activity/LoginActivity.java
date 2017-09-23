@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.telc2.vline.R;
 import com.example.telc2.vline.api.ApiRequest;
@@ -52,11 +53,19 @@ public class LoginActivity extends AppCompatActivity {
                         UserLoginResponseModel res = response.body();
                         userRegisList = res.getResult();
 
+                        if (response.body().getSukses().equals("1")) {
+                            Toast.makeText(LoginActivity.this, "Selamat Datang!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Login gagal, silahkan coba lagi!", Toast.LENGTH_SHORT).show();
+                        }
                     }
 
                     @Override
                     public void onFailure(Call<UserLoginResponseModel> call, Throwable t) {
                         Log.d("Retrofit", "Response: asdfasdfasdf");
+                        Toast.makeText(LoginActivity.this, "Login gagal, silahkan coba lagi!", Toast.LENGTH_SHORT).show();
                     }
                 });
 //

@@ -13,14 +13,18 @@ public class Bank {
     private String bank_nomor_antri_cs_sekarang;
     private String bank_jumlah_antri_teller;
     private String bank_jumlah_antri_cs;
+    private String bank_longitude;
+    private String bank_latitude;
 
-    public Bank(String bank_id, String bank_nama, String bank_nomor_antri_teller_sekarang, String bank_nomor_antri_cs_sekarang, String bank_jumlah_antri_teller, String bank_jumlah_antri_cs) {
+    public Bank(String bank_id, String bank_nama, String bank_nomor_antri_teller_sekarang, String bank_nomor_antri_cs_sekarang, String bank_jumlah_antri_teller, String bank_jumlah_antri_cs, String bank_longitude, String bank_latitude) {
         this.bank_id = bank_id;
         this.bank_nama = bank_nama;
         this.bank_nomor_antri_teller_sekarang = bank_nomor_antri_teller_sekarang;
         this.bank_nomor_antri_cs_sekarang = bank_nomor_antri_cs_sekarang;
         this.bank_jumlah_antri_teller = bank_jumlah_antri_teller;
         this.bank_jumlah_antri_cs = bank_jumlah_antri_cs;
+        this.bank_longitude = bank_longitude;
+        this.bank_latitude = bank_latitude;
     }
 
     public String getBank_id() {
@@ -77,5 +81,21 @@ public class Bank {
 
     public void setBank_jumlah_antri_cs(String bank_jumlah_antri_cs) {
         this.bank_jumlah_antri_cs = bank_jumlah_antri_cs;
+    }
+
+    public String getBank_longitude() {
+        return bank_longitude;
+    }
+
+    public void setBank_longitude(String bank_longitude) {
+        this.bank_longitude = bank_longitude;
+    }
+
+    public String getBank_latitude() {
+        return bank_latitude;
+    }
+
+    public void setBank_latitude(String bank_latitude) {
+        this.bank_latitude = bank_latitude;
     }
 }

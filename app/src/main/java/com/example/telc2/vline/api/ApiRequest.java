@@ -1,5 +1,9 @@
 package com.example.telc2.vline.api;
 
+import com.example.telc2.vline.model.responsemodel.BankMarkerResponseModel;
+import com.example.telc2.vline.model.responsemodel.BankResponseModel;
+import com.example.telc2.vline.model.responsemodel.InfoBankResponseModel;
+import com.example.telc2.vline.model.responsemodel.StatusBankResponseModel;
 import com.example.telc2.vline.model.responsemodel.UserLoginResponseModel;
 import com.example.telc2.vline.model.responsemodel.UserRegisResponseModel;
 
@@ -27,4 +31,13 @@ public interface ApiRequest {
     Call<UserLoginResponseModel> loginUser(@Field("username_user") String username_user,
                                            @Field("password_user") String password_user);
 
+
+    @GET("bni/mobileapi/bank.php")
+    Call<StatusBankResponseModel> getBank();
+
+    @GET("bni/mobileapi/statusbank.php")
+    Call<StatusBankResponseModel> getStatusBank();
+
+    @GET("bni/mobileapi/infobank.php")
+    Call<InfoBankResponseModel> getInfoBank();
 }
