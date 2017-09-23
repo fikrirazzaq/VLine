@@ -14,6 +14,15 @@ public class Bank {
     private String bank_jumlah_antri_teller;
     private String bank_jumlah_antri_cs;
 
+    public Bank(String bank_id, String bank_nama, String bank_nomor_antri_teller_sekarang, String bank_nomor_antri_cs_sekarang, String bank_jumlah_antri_teller, String bank_jumlah_antri_cs) {
+        this.bank_id = bank_id;
+        this.bank_nama = bank_nama;
+        this.bank_nomor_antri_teller_sekarang = bank_nomor_antri_teller_sekarang;
+        this.bank_nomor_antri_cs_sekarang = bank_nomor_antri_cs_sekarang;
+        this.bank_jumlah_antri_teller = bank_jumlah_antri_teller;
+        this.bank_jumlah_antri_cs = bank_jumlah_antri_cs;
+    }
+
     public String getBank_id() {
         return bank_id;
     }

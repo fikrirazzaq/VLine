@@ -7,6 +7,8 @@ import com.example.telc2.vline.R;
 
 public class StatusActivity extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

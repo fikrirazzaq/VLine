@@ -9,14 +9,14 @@
     tools:context="com.example.telc2.vline.activity.LoginActivity">
     <!-- Blok Icon START -->
     <RelativeLayout
-        android:id="@+id/rl_act_reg_logo"
+        android:id="@+id/rl_act_login_logo"
         android:layout_marginBottom="42dp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/img_act_reg_logo"
-            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img_act_login_logo"
+            android:src="@mipmap/logo3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
@@ -24,48 +24,37 @@
 
     <!-- Blok Form START -->
     <RelativeLayout
-        android:id="@+id/rl_act_reg_form"
-        android:layout_below="@+id/rl_act_reg_logo"
+        android:id="@+id/rl_act_login_form"
+        android:layout_below="@+id/rl_act_login_logo"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/edt_act_reg_email"
-            android:hint="e-mail"
+            android:id="@+id/edt_act_login_username"
+            android:hint="username"
             android:inputType="textEmailAddress"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_lock_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edt_act_login_pass"
+            android:layout_below="@+id/edt_act_login_username"
+            android:hint="password"
+            android:inputType="textPassword"
             android:drawablePadding="20dp"
             android:drawableTint="@color/colorPrimary"
             android:drawableLeft="@drawable/ic_mail_24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/edt_act_reg_pass"
-            android:layout_below="@+id/edt_act_reg_email"
-            android:hint="password"
-            android:inputType="textPassword"
-            android:drawablePadding="20dp"
-            android:drawableTint="@color/colorPrimary"
-            android:drawableLeft="@drawable/ic_lock_24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id="@+id/edt_act_reg_passconf"
-            android:hint="confirm password"
-            android:inputType="textPassword"
-            android:drawablePadding="20dp"
-            android:drawableTint="@color/colorPrimary"
-            android:drawableLeft="@drawable/ic_lock_24dp"
-            android:layout_below="@+id/edt_act_reg_pass"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
         <Button
-            android:id="@+id/btn_act_reg_signup"
-            android:text="Sign Up"
+            android:id="@+id/btn_act_login_signup"
+            android:text="Sign In"
             android:textColor="#FFFFFF"
             android:textAllCaps="false"
             android:background="@drawable/button_bg"
@@ -74,40 +63,9 @@
             android:paddingRight="40dp"
             android:layout_marginTop="24dp"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/edt_act_reg_passconf"
-            android:layout_width="wrap_content"
+            android:layout_below="@+id/edt_act_login_pass"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </RelativeLayout>
     <!-- Blok Form END -->
-
-    <!-- Blok Already Have Akun START -->
-    <RelativeLayout
-        android:id="@+id/rl_act_reg_alreadyakun"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/rl_act_reg_form"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center">
-        <TextView
-            android:id="@+id/tx_act_reg_infosignin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="already have an account?"/>
-
-        <Button
-            android:id="@+id/btn_act_reg_signin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="64dp"
-            android:minHeight="48dp"
-            android:text="sign in"
-            android:textColor="@color/colorPrimary"
-            android:textAllCaps="false"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_alignBaseline="@+id/tx_act_reg_infosignin"
-            android:layout_alignBottom="@+id/tx_act_reg_infosignin"
-            android:layout_toRightOf="@+id/tx_act_reg_infosignin"
-            android:layout_toEndOf="@+id/tx_act_reg_infosignin" />
-    </RelativeLayout>
-    <!-- Blok Already Have Akun END -->
 </RelativeLayout>

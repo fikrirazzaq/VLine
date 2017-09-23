@@ -8,10 +8,260 @@
     tools:context="com.example.telc2.vline.activity.InfoBankActivity"
     tools:showIn="@layout/activity_info_bank">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_info_bankir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Alamat-->
+            <RelativeLayout
+                android:id="@+id/rl_info_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ececec"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/img_info_alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail_24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="16dp"
+
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tx_info_alamat"
+                    android:text="Jl. Telekomunikasi No. 1 Bandung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_info_alamat"
+                    android:layout_toEndOf="@+id/img_info_alamat" />
+            </RelativeLayout>
+
+            <!--Info Buka-->
+            <RelativeLayout
+                android:layout_below="@+id/rl_info_alamat"
+                android:id="@+id/rl_info_jambuka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ececec"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/img_info_jambuka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail_24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tx_info_jambuka"
+                    android:text="Jl. Telekomunikasi No. 1 Bandung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_info_jambuka"
+                    android:layout_toEndOf="@+id/img_info_jambuka" />
+
+            </RelativeLayout>
+
+            <!--Estimasi-->
+            <RelativeLayout
+                android:layout_marginBottom="12dp"
+                android:layout_below="@+id/rl_info_jambuka"
+                android:id="@+id/rl_info_estimasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ececec"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <ImageView
+                    android:id="@+id/img_info_estimasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mail_24dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:id="@+id/tx_info_estimasi"
+                    android:text="Jl. Telekomunikasi No. 1 Bandung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_info_estimasi"
+                    android:layout_toEndOf="@+id/img_info_estimasi" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:id="@+id/ll_info_antrian"
+            android:layout_below="@+id/rl_info_bankir"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Info Antrian Teller-->
+            <RelativeLayout
+                android:id="@+id/rl_info_antrian_teller"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tx_info_antrian_teller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:text="Teller"
+                    android:textColor="@color/colorPrimary"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_info_antrian_teller_nomorantri"
+                    android:layout_below="@id/tx_info_antrian_teller"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="@mipmap/circle_orange"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/tx_antri_teller"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Antrian"/>
+
+                    <TextView
+                        android:id="@+id/tx_info_antrian_teller_nomorantri"
+                        android:layout_below="@id/tx_antri_teller"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="48sp"
+                        android:text="98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tx_info_antrian_teller_jumlahantri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail_24dp"
+                    android:drawablePadding="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="89"
+                    android:textSize="18sp"
+                    android:padding="8dp"
+                    android:layout_below="@+id/rl_info_antrian_teller_nomorantri" />
+
+                <Button
+                    android:id="@+id/btn_info_antrian_teller_antri"
+                    android:layout_below="@+id/tx_info_antrian_teller_jumlahantri"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="+ Tiket Antrian"/>
+            </RelativeLayout>
+
+            <!--Info Antrian CS-->
+            <RelativeLayout
+                android:id="@+id/rl_info_antrian_cs"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tx_info_antrian_cs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="4dp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Customer Service"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_info_antrian_cs_nomorantri"
+                    android:layout_below="@id/tx_info_antrian_cs"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="@mipmap/circle_blue"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/tx_antri_cs"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Antrian"/>
+
+                    <TextView
+                        android:id="@+id/tx_info_antrian_cs_nomorantri"
+                        android:layout_below="@id/tx_antri_cs"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="48sp"
+                        android:text="98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tx_info_antrian_cs_jumlahantri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mail_24dp"
+                    android:drawablePadding="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18sp"
+                    android:padding="8dp"
+                    android:text="89"
+                    android:layout_below="@+id/rl_info_antrian_cs_nomorantri" />
+
+                <Button
+                    android:id="@+id/btn_info_antrian_cs_antri"
+                    android:layout_below="@+id/tx_info_antrian_cs_jumlahantri"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="+ Tiket Antrian"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </android.support.v4.widget.NestedScrollView>

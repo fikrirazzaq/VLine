@@ -1,23 +1,24 @@
 package com.example.telc2.vline.model.responsemodel;
 
 import com.example.telc2.vline.model.Bank;
+import com.example.telc2.vline.model.UserRegis;
 
 import java.util.List;
 
 /**
- * Created by TEL-C on 9/22/17.
+ * Created by juvetic on 9/23/17.
  */
 
-public class BankResponseModel {
+public class UserRegisResponseModel {
 
     String sukses, pesan;
-    List<Bank> result;
+    List<UserRegis> result;
 
-    public List<Bank> getResult() {
+    public List<UserRegis> getResult() {
         return result;
     }
 
-    public void setResult(List<Bank> result) {
+    public void setResult(List<UserRegis> result) {
         this.result = result;
     }
 
